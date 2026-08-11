@@ -8,7 +8,7 @@ def inicio():
         "index4.html",
         nombre = "Iván",
         edad= 24,
-        estudiante = False
+        estudiante = True
     )
 
 app.run(debug=True)
