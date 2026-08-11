@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eventos 3</title>
+</head>
+<body>
+<h2> Eventos próximos: </h2>
+    <li>{% for evento in eventos %}
+        <h3>{{evento.nombre}}</h3>
+            <p>Nombre del cliente: {{evento.cliente}}</p>
+            <p>Invitados: {{evento.invitados}}</p>
+            {% if evento.confirmado %}
+                <p>✓ Evento confirmado</p>
+            {% else %}
+                <p>⚠ Evento pendiente de confirmación</p>
+            {% endif %}
+
+    {% endfor %}</li>
+</body>
+
+</html>
