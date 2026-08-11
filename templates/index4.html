@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Jinja IF Parte 2 </title>
+</head>
+<body>
+    <h1> Hola {{nombre}} </h1>
+
+    {% if estudiante %}
+        <p> {{nombre}} es estudiante. </p>
+    {% else %}
+        <p> {{nombre}} no es estudiante. </p>
+    {% endif %}
+
+    {% if edad >= 18 %}
+        <p> Es mayor de edad. </p>
+    {% else %}
+        <p> Es menor de edad. </p>
+    {% endif %}
+
+</body>
+</html>
