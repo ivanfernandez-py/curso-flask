@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ingresar evento</title>
+    </head>
+
+    <body>
+        <form method = "POST">
+            <label>Evento: </label>
+            <input type="text" name="evento">
+
+            <label>Cliente: </label>
+            <input type="text" name="cliente">
+
+            <label>Invitados: </label>
+            <input type="text" name="invitados">
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if evento %}
+                    <p>Evento: {{evento}}</p>
+                    <p>Cliente: {{cliente}}</p>
+                    <p>Invitados: {{invitados}}</p>
+
+        {% endif %}    
+
+    </body>
+
+</html>

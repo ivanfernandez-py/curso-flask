@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Method POST</title>
+    </head>
+
+    <body>
+        <form method="POST">
+            <label>Nombre: </label>
+            <input type="text" name="nombre">
+            <button type = "submit">Enviar</button>
+        </form>
+
+        {% if nombre %}
+            <h2>Hola {{ nombre }}</h2>
+        {% endif %}
+    </body>
+</html>
