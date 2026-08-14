@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Cliente</title>
+</head>
+<body>
+    <h1>Introduce datos: </h1>
+    <form method = "POST" action =/ >
+        <p>Nombre del cliente: </p>
+        <input type="text" name = "cliente">
+        <p>Teléfono: </p>
+        <input type="text" name="telefono">
+        <button type="submit">Enviar</button>
+
+        {% if cliente %}
+            <h2>Datos recibidos: </h2>
+            <p>Cliente: {{cliente}}</p>
+            <p>Teléfono: {{telefono}}</p>
+        {% endif %}
+    </form>
+</body>
+</html>
