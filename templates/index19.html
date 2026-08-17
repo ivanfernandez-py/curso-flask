@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar cliente</title>
+</head>
+<body>
+    <form method = "POST">
+        <P>Cliente :</P>
+        <input type="text" name="cliente">
+        <p>Teléfono: </p>
+        <input type="text" name="telefono">
+        <p>Ordenes: </p>
+        <input type="text" name="ordenes">
+        <p>Fecha: </p>
+        <input type="text" name="fecha">
+        <p>Hora: </p>
+        <input type="text" name="hora">
+        <p>Ubicacion: </p>
+        <input type="text" name="ubicacion">
+        <button type = "submit">Agregar evento</button>
+    </form>
+        <hr>
+        {% for evento in eventos %}
+            <h2>{{ evento.cliente }}</h2>
+            <p>Teléfono: {{evento.telefono}}</p>
+            <p>Ordenes: {{evento.ordenes}}</p>
+            <p>Fecha: {{evento.fecha}}</p>
+            <p>Hora: {{evento.hora}}</p>
+            <p>Ubicación: {{evento.ubicacion}}</p>
+        {% endfor %}          
+</body>
+
+
+</html>
