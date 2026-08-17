@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taco Planner</title>
+</head>
+<body>
+    <h1>Registrar evento</h1>
+    <form method="POST">
+        <p>Cliente: </p>
+        <input type="text" name="cliente">
+        <p>Teléfono: </p>
+        <input type="text" name="telefono">
+
+        <button type="submit">Agregar evento</button>
+
+    </form>
+    <hr>
+    {% if mensaje %}    
+        {{mensaje}}
+        <hr>
+            {% if mensaje == "Evento registrado correctamente." %}
+                {% for evento in eventos %}
+                    <h2> {{evento.cliente}} </h2>
+                    <p> Telefono: {{evento.telefono}} </p>
+                {% endfor %}
+            {% endif %}
+    {% endif %} 
+
+
+    <hr>
+    
+
+
+
+</body>
+</html>
