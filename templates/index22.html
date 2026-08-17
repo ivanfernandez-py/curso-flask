@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taco Planner</title>
+</head>
+<body>
+    <h1>Registrar evento</h1>
+    <form method="POST">
+        <p>Cliente: </p>
+        <input type="text" name="cliente">
+        <p>Teléfono: </p>
+        <input type="text" name="telefono">
+        <p>Confirmado?: </p>
+        <label>Si</label>
+        <input type="radio" name="confirmado" value="si">
+        <label>No</label>
+        <input type="radio" name="confirmado" value="no">
+
+        <br><br>
+
+        <button type="submit">Agregar evento</button>
+
+    </form>
+    <hr>
+    {% for evento in eventos %}
+        <h2>{{ evento.cliente }}</h2>
+        <p> Telefono: {{ evento.telefono}} </p>
+        <p> Ordenes: {{evento.ordenes}} </p>
+
+        {% if evento.confirmado %}
+            <p>Confirmado: Si </p>
+        {% else %}
+            <p>Confirmado: No</p>
+        {% endif %}
+    {% endfor %}
+    <hr>
+    
+
+
+
+</body>
+</html>

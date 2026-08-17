@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar evento</title>
+</head>
+<body>
+    <form method="POST">
+        <p>Cliente: </p>
+        <input type="text" name="cliente">
+        <p>Telefono: </p>
+        <input type="text" name="telefono">
+        <p>Ordenes: </p>
+        <input type="text" name="ordenes">
+        <button type="submit">Agregar evento</button>
+    </form>
+    <hr>
+    {% for evento in eventos %}
+        <h2>{{ evento.cliente }}</h2>
+        <p>Teléfono: {{ evento.telefono }}</p>
+        <p>Órdenes: {{ evento.ordenes }}</p>
+    {% endfor %}
+</body>
+</html>
