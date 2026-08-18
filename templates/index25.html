@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrar evento</title>
+    </head>
+
+    <body>
+        <h1>Registrar evento</h1>
+            <form method = "POST">
+                <p> Cliente: </p>
+                <input type="text" name="cliente">
+                <p> Telefono: </p>
+                <input type="text" name="telefono">
+                <p> Ordenes: </p>
+                <input type="text" name="ordenes">
+
+                <button type = "submit">Agregar evento</button>
+
+            </form>
+        {% if errores %}
+            <div class="notificacion-error">
+                <h3> ⚠ Errores </h3>
+                    <ul>
+                        {% for error in errores %}
+                            <li>{{error}}</li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        {% endif %}
+        <hr>
+        {% for evento in eventos %}
+            <h2>{{ evento.cliente }}</h2>
+            <p>Telefono: {{ evento.telefono }}</p>
+            <p>Ordenes: {{ evento.ordenes }}</p>
+        {% endfor %}
+    </body>
+</html>
