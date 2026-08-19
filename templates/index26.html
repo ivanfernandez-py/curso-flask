@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar evento</title>
+</head>
+<body>
+    <h2>Agregar evento</h2>
+    <form method = "POST">
+        <p>Cliente: </p>
+        <input type="text" name="cliente">
+        <p>Teléfono: </p>
+        <input type="text" name="telefono">
+        <p>Ordenes: </p>
+        <input type="text" name="ordenes">
+        <p>Fecha: </p>
+        <input type="date" name="fecha">
+        <p>Hora: </p>
+        <input type="time" name="hora">
+        <p>Ubicación: </p>
+        <input type="text" name="ubicacion">
+
+        <button type="submit">Agregar evento</button>
+    </form>
+
+    <hr>
+
+    {% if errores %}
+        <h3> ⚠ Errores </h3>
+        {% for error in errores %}
+            <li>{{error}}</li>
+        {% endfor %}
+    {% endif %}
+
+    {% if eventos %}
+        {% for evento in eventos %}
+            <h3>{{ evento.cliente }}</h3>  
+            <li>Teléfono: {{evento.telefono}}</li>      
+            <li>Ordenes: {{evento.ordenes}}</li>      
+            <li>Fecha: {{ evento.fecha.strftime("%d/%m/%Y") }}</li>      
+            <li>Hora: {{ evento.hora.strftime("%H:%M") }}</li>      
+            <li>Ubicacion: {{evento.ubicacion}}</li>     
+        {% endfor %}
+    {% endif %}
+
+
+    </body>
+</html>

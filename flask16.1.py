@@ -31,7 +31,7 @@ def inicio():
                 if ordenes_otras.isdigit():
                     ordenes = ordenes_otras
                 else:
-                    errores.append("Ingresa numero de ordenes valido. ")
+                    errores.append("Ingresa número de ordenes válido. ")
                             
         if not telefono: 
             errores.append("El campo 'Telefono' es obligatorio.")
