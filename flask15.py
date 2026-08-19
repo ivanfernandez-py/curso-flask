@@ -22,6 +22,7 @@ def inicio():
             errores.append("El campo 'Ordenes' es obligatorio. ")
         if len(telefono) != 10:
             errores.append("El campo 'Telefono' debe tener 10 digitos. ")
+    
         
             
         if not errores:
